@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptForge — AI Prompt Packs That Do the Work For You</title>
+<meta name="description" content="Battle-tested AI prompt packs for small business owners, marketers and solopreneurs. Copy, paste, profit. Free prompt generator included.">
+<meta property="og:title" content="PromptForge — AI Prompt Packs That Do the Work For You">
+<meta property="og:description" content="Battle-tested AI prompt packs for small businesses. Stop staring at a blank chat box — copy, paste, profit.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0e14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#121722; --card:#161c2a; --line:#242d40;
+  --text:#e8ecf4; --muted:#9aa5bb; --accent:#ffb020; --accent2:#4f8cff;
+  --ok:#3ecf8e; --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:1.15rem;color:var(--text)}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav ul a{color:var(--muted);font-size:.92rem;font-weight:500}
+nav ul a:hover{color:var(--text)}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#1a1200;box-shadow:0 4px 20px rgba(255,176,32,.25)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn-sm{padding:9px 18px;font-size:.88rem}
+/* HERO */
+.hero{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% -10%,rgba(79,140,255,.18),transparent)}
+.pill{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:.8rem;color:var(--muted);margin-bottom:22px;background:var(--bg2)}
+.pill b{color:var(--ok)}
+h1{font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.12;font-weight:850;letter-spacing:-.02em;max-width:820px;margin:0 auto 20px}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 34px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.trust{margin-top:38px;font-size:.85rem;color:var(--muted)}
+.trust b{color:var(--text)}
+/* SECTIONS */
+section{padding:72px 0}
+.kicker{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.12em;margin-bottom:10px}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+.lead{color:var(--muted);max-width:600px;margin-bottom:40px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+/* GENERATOR */
+#generator{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gen-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;max-width:760px;margin:0 auto}
+.gen-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:640px){.gen-grid{grid-template-columns:1fr}}
+label{display:block;font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px}
+select,input[type=text],input[type=email]{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:.95rem;outline:none}
+select:focus,input:focus{border-color:var(--accent2)}
+.gen-out{margin-top:20px;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem;white-space:pre-wrap;color:#c9d4e8;display:none}
+.gen-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.copied{color:var(--ok);font-size:.85rem;align-self:center;display:none}
+/* PRODUCTS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;position:relative}
+.card.featured{border-color:var(--accent);box-shadow:0 8px 40px rgba(255,176,32,.12)}
+.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#1a1200;font-size:.72rem;font-weight:800;padding:4px 14px;border-radius:99px;text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.price{font-size:2.1rem;font-weight:850;margin:12px 0 2px}
+.price small{font-size:.9rem;color:var(--muted);font-weight:500}
+.was{color:var(--muted);text-decoration:line-through;font-size:.95rem;margin-left:8px}
+.card ul{list-style:none;margin:18px 0 26px;flex:1}
+.card li{padding:7px 0;font-size:.92rem;color:var(--muted);padding-left:26px;position:relative}
+.card li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+.card .btn{width:100%;text-align:center}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.step::before{counter-increment:step;content:counter(step);display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;background:var(--accent2);color:#fff;font-weight:800;border-radius:9px;margin-bottom:14px}
+.step h3{font-size:1.05rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.92rem}
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;font-size:.98rem}
+details p{margin-top:12px;color:var(--muted);font-size:.93rem}
+/* EMAIL */
+#email{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.email-form{display:flex;gap:10px;max-width:480px;margin:26px auto 0;flex-wrap:wrap;justify-content:center}
+.email-form input{flex:1;min-width:240px}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">⚡ Prompt<span>Forge</span></div>
+    <ul>
+      <li><a href="#generator">Free Tool</a></li>
+      <li><a href="#packs">Prompt Packs</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#packs" class="btn btn-primary btn-sm">Get the Packs</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="pill"><b>●</b> 160+ battle-tested prompts · Updated July 2026</div>
+    <h1>Stop staring at a blank chat box.<br><em>Copy. Paste. Profit.</em></h1>
+    <p class="sub">Battle-tested AI prompt packs for small business owners, marketers and solopreneurs. Turn ChatGPT &amp; Claude into your marketing team, copywriter and business analyst — in minutes, not months.</p>
+    <div class="hero-ctas">
+      <a href="#packs" class="btn btn-primary">Browse Prompt Packs →</a>
+      <a href="#generator" class="btn btn-ghost">Try the Free Generator</a>
+    </div>
+    <p class="trust">Works with <b>ChatGPT</b>, <b>Claude</b> and <b>Gemini</b> · Instant download · 30-day money-back guarantee</p>
+  </div>
+</header>
+
+<section id="generator">
+  <div class="wrap center">
+    <div class="kicker">Free Tool</div>
+    <h2>AI Prompt Generator</h2>
+    <p class="lead">Tell us what you need and get a professional-grade prompt instantly. A taste of what's inside the packs.</p>
+    <div class="gen-box">
+      <div class="gen-grid">
+        <div>
+          <label for="task">What do you need?</label>
+          <select id="task">
+            <option value="social">Social media post</option>
+            <option value="email">Sales email</option>
+            <option value="ad">Ad copy (Facebook/Google)</option>
+            <option value="blog">SEO blog post</option>
+            <option value="product">Product description</option>
+            <option value="plan">30-day marketing plan</option>
+            <option value="offer">Irresistible offer / pricing</option>
+            <option value="reply">Customer review reply</option>
+          </select>
+        </div>
+        <div>
+          <label for="biz">Your business (e.g. "a mobile dog grooming service in Austin")</label>
+          <input type="text" id="biz" placeholder="a handmade candle shop on Etsy" maxlength="120">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="genBtn" style="width:100%">⚡ Generate My Prompt</button>
+      <div class="gen-out" id="genOut"></div>
+      <div class="gen-actions">
+        <button class="btn btn-ghost btn-sm" id="copyBtn" style="display:none">📋 Copy prompt</button>
+        <span class="copied" id="copiedMsg">Copied! Paste it into ChatGPT or Claude.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packs">
+  <div class="wrap center">
+    <div class="kicker">The Products</div>
+    <h2>Prompt packs that pay for themselves</h2>
+    <p class="lead">One good ad, one converting email, one viral post — and the pack has paid for itself many times over.</p>
+    <div class="cards" style="text-align:left">
+
+      <div class="card">
+        <h3>🎁 Starter Pack</h3>
+        <p style="color:var(--muted);font-size:.9rem">10 essential prompts every business owner needs.</p>
+        <div class="price">Free</div>
+        <ul>
+          <li>10 copy-paste prompts</li>
+          <li>Social, email &amp; ads basics</li>
+          <li>Fill-in-the-blank format</li>
+          <li>Delivered instantly by email</li>
+        </ul>
+        <a href="#email" class="btn btn-ghost">Get It Free</a>
+      </div>
+
+      <div class="card featured">
+        <div class="badge">Best Seller</div>
+        <h3>🚀 Marketing Machine</h3>
+        <p style="color:var(--muted);font-size:.9rem">50 marketing prompts that replace a $2k/mo agency.</p>
+        <div class="price">$19 <span class="was">$29</span></div>
+        <ul>
+          <li>50 battle-tested marketing prompts</li>
+          <li>Ads, emails, social, SEO &amp; funnels</li>
+          <li>Real examples for each prompt</li>
+          <li>Lifetime updates included</li>
+          <li>30-day money-back guarantee</li>
+        </ul>
+        <!-- LAUNCH: replace href with your Gumroad/LemonSqueezy/Stripe payment link -->
+        <a href="#buy-setup" class="btn btn-primary buy-link" data-product="marketing-machine">Buy Now — $19</a>
+      </div>
+
+      <div class="card">
+        <h3>👑 AI Business OS</h3>
+        <p style="color:var(--muted);font-size:.9rem">The complete operating system: 100+ prompts + workflows.</p>
+        <div class="price">$39 <span class="was">$59</span></div>
+        <ul>
+          <li>Everything in Marketing Machine</li>
+          <li>100+ prompts across 10 departments</li>
+          <li>5 done-for-you AI workflows</li>
+          <li>Strategy, finance, hiring &amp; ops</li>
+          <li>Lifetime updates included</li>
+        </ul>
+        <!-- LAUNCH: replace href with your Gumroad/LemonSqueezy/Stripe payment link -->
+        <a href="#buy-setup" class="btn btn-ghost buy-link" data-product="ai-business-os">Buy Now — $39</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <div class="kicker">How It Works</div>
+    <h2>From download to done in 5 minutes</h2>
+    <p class="lead">No courses. No 4-hour videos. Just open, copy, paste, and customize.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step"><h3>Download the pack</h3><p>Instant delivery. Clean, organized documents — every prompt tagged by goal and channel.</p></div>
+      <div class="step"><h3>Fill in the blanks</h3><p>Each prompt has [BRACKETED] placeholders. Drop in your business, audience and offer.</p></div>
+      <div class="step"><h3>Paste &amp; profit</h3><p>Run it in ChatGPT, Claude or Gemini. Get agency-quality output in seconds. Repeat daily.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="email">
+  <div class="wrap">
+    <div class="kicker">Free Starter Pack</div>
+    <h2>Get 10 free prompts + weekly AI money moves</h2>
+    <p class="lead" style="margin:0 auto">Join the newsletter and get the Starter Pack instantly. One short email a week. Unsubscribe anytime.</p>
+    <!-- LAUNCH: replace action with your form endpoint (Formspree / Buttondown / ConvertKit / MailerLite) -->
+    <form class="email-form" id="emailForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <button class="btn btn-primary" type="submit">Send Me the Pack</button>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker center" style="text-align:center">FAQ</div>
+    <h2 class="center" style="text-align:center;margin-bottom:36px">Questions, answered</h2>
+    <details open>
+      <summary>Do these work with ChatGPT free plan / Claude / Gemini?</summary>
+      <p>Yes. Every prompt is model-agnostic and tested on ChatGPT (free &amp; Plus), Claude and Gemini. If it needs a specific model, the prompt says so.</p>
+    </details>
+    <details>
+      <summary>I'm not techy. Is this for me?</summary>
+      <p>Especially for you. If you can copy and paste, you can use these. Every prompt is fill-in-the-blank with an example of what "done" looks like.</p>
+    </details>
+    <details>
+      <summary>How is this different from free prompts online?</summary>
+      <p>Free prompt lists are generic one-liners. These are structured prompts with role, context, constraints and output format built in — the difference between "write me an ad" and output you can actually publish. Plus they're organized by business goal, not dumped in a random list.</p>
+    </details>
+    <details>
+      <summary>What if it's not for me?</summary>
+      <p>30-day, no-questions-asked refund. Email us and you get your money back. You keep the files.</p>
+    </details>
+    <details>
+      <summary>Do I get updates?</summary>
+      <p>Yes — lifetime. When models change and prompts get better, you get the new version free.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>⚡ <b>PromptForge</b> — AI prompt packs for people who'd rather run their business than fight with AI.</p>
+    <p style="margin-top:8px">© 2026 PromptForge · <a href="#faq">Refund policy</a> · <a href="mailto:ockgeo@gmail.com">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+// ---------- Prompt Generator ----------
+const TEMPLATES = {
+  social: (b)=>`You are a senior social media strategist. Write 3 scroll-stopping social media posts for ${b}.
+
+For each post:
+- Start with a hook that creates curiosity or calls out the target customer in the first line
+- Keep it under 120 words, conversational, no corporate speak
+- End with one clear call to action
+- Add 3 relevant hashtags
+
+Make post 1 educational, post 2 a customer story/social proof angle, post 3 a direct offer. Format each clearly labeled.`,
+  email: (b)=>`You are a direct-response copywriter trained on classic sales letters. Write a sales email for ${b}.
+
+Structure:
+1. Subject line (max 6 words, curiosity-driven) + 2 alternates
+2. Opening line that agitates the reader's #1 pain point
+3. Body: present the offer as the bridge from pain to outcome (max 150 words)
+4. One clear CTA button text
+5. P.S. line with urgency
+
+Tone: like a helpful friend who happens to sell this, not a marketer. No hype words like "revolutionary" or "game-changing".`,
+  ad: (b)=>`You are a performance marketer who has spent $10M+ on paid ads. Write ad copy for ${b}.
+
+Deliver:
+1. 3 Facebook/Instagram ad variants — each with hook (first 5 words matter most), body under 90 words, CTA
+2. 3 Google Search ads — 3 headlines (max 30 chars each) + 2 descriptions (max 90 chars each)
+3. For each variant, one line explaining the psychological angle used (fear of missing out, social proof, problem-agitate-solve, etc.)
+
+Target the customer who is aware of their problem but hasn't heard of us yet.`,
+  blog: (b)=>`You are an SEO content strategist. Create a blog post plan for ${b}.
+
+Step 1: Suggest 5 blog post titles targeting keywords a ready-to-buy customer would search. For each, note search intent (informational/commercial).
+Step 2: For the strongest title, write a full outline: H2/H3 structure, key points per section, FAQ section with 4 questions pulled from "People Also Ask" style queries.
+Step 3: Write the first 200 words — hook the reader with the problem, promise the solution, no fluff intro like "In today's digital world".`,
+  product: (b)=>`You are a conversion copywriter for e-commerce. Write a product description for ${b}.
+
+Include:
+1. Headline: outcome the buyer gets, not what the product is
+2. 3 short paragraphs: the problem → the product as solution → life after buying
+3. 5 scannable bullet points (benefit first, feature second, e.g. "Sleep cooler — breathable bamboo fabric")
+4. Handle the #1 objection a hesitant buyer would have
+5. Short urgency line that doesn't feel fake
+
+Max 250 words total. 7th-grade reading level.`,
+  plan: (b)=>`You are a fractional CMO for small businesses. Build a 30-day marketing plan for ${b}, assuming a budget under $500 and 5 hours/week.
+
+Format:
+- Week-by-week table: focus, exact actions (max 3/week), time cost, money cost, success metric
+- Prioritize free channels first (organic social, email, partnerships, local SEO)
+- One paid experiment in week 3 with exact budget and kill-criteria
+- End with the single most important metric to watch and what "working" looks like at day 30
+
+Be brutally specific — name platforms, posting frequency, and exact next actions. No generic advice like "engage with your audience".`,
+  offer: (b)=>`You are a pricing and offer strategist (think Alex Hormozi's value equation). Redesign the core offer for ${b}.
+
+Deliver:
+1. Diagnose: what the customer is really buying (the outcome, not the product)
+2. 3 offer structures: entry-level, core, premium — with suggested price points and what's included in each
+3. 2 risk-reversals (guarantee ideas) that make buying feel safe
+4. 1 urgency/scarcity mechanic that is honest, not fake
+5. The exact one-sentence offer statement: "Get [outcome] in [timeframe] without [pain], or [guarantee]"`,
+  reply: (b)=>`You are a customer experience manager for ${b}. Write review replies I can reuse.
+
+1. A warm reply template for 5-star reviews (2-3 sentences, mention the reviewer's specific detail, invite them back)
+2. A professional reply for a 3-star "it was okay" review that wins them back without being defensive
+3. A calm, accountable reply for a 1-star angry review: acknowledge, take it offline, offer to make it right — never argue
+4. One-line internal rule for when NOT to reply publicly
+
+Keep every reply under 60 words and human — no corporate apology-speak.`
+};
+document.getElementById('genBtn').addEventListener('click',()=>{
+  const task=document.getElementById('task').value;
+  const biz=document.getElementById('biz').value.trim()||'a small local business';
+  const out=document.getElementById('genOut');
+  out.textContent=TEMPLATES[task](biz);
+  out.style.display='block';
+  document.getElementById('copyBtn').style.display='inline-block';
+  document.getElementById('copiedMsg').style.display='none';
+});
+document.getElementById('copyBtn').addEventListener('click',()=>{
+  navigator.clipboard.writeText(document.getElementById('genOut').textContent).then(()=>{
+    document.getElementById('copiedMsg').style.display='inline';
+  });
+});
+// ---------- Buy buttons (pre-launch guard) ----------
+document.querySelectorAll('.buy-link').forEach(a=>{
+  a.addEventListener('click',e=>{
+    if(a.getAttribute('href').startsWith('#buy-setup')){
+      e.preventDefault();
+      alert('Almost live! Connect your payment link:\n\n1. Create a free Gumroad account\n2. Upload the product file from /products\n3. Paste your Gumroad link into this button\'s href in index.html\n\nSee README.md → Launch Checklist (takes ~10 minutes).');
+    }
+  });
+});
+// ---------- Email form guard ----------
+document.getElementById('emailForm').addEventListener('submit',e=>{
+  const f=e.target;
+  if(f.action.includes('YOUR_FORM_ID')){
+    e.preventDefault();
+    alert('Email capture is one step from live:\n\n1. Create a free Formspree or Buttondown account\n2. Replace YOUR_FORM_ID in index.html with your endpoint\n\nSee README.md → Launch Checklist.');
+  }
+});
+</script>
+</body>
+</html>
