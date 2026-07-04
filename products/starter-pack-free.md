@@ -1,97 +1,108 @@
-# ⚡ PromptForge Starter Pack (Free)
+# 🔬 ResearchForge Starter Pack (Free)
 
-**10 essential AI prompts every business owner needs.**
-Works with ChatGPT, Claude and Gemini. Replace anything in `[BRACKETS]` with your details, paste the whole prompt, done.
+**10 essential AI prompts every researcher needs.**
+Works with ChatGPT, Claude and Gemini. Replace anything in `[BRACKETS]`, paste the whole prompt, refine.
 
-> 💡 Pro tip: The more specific your `[BRACKETS]`, the better the output. "a candle shop" is okay — "a handmade soy candle shop on Etsy for eco-conscious millennials" is 10x better.
-
----
-
-## 1. The Elevator Pitch Fixer
-```
-You are a brand strategist. My business: [WHAT YOU SELL] for [WHO YOU SERVE].
-Write 5 one-sentence elevator pitches. Each must name the customer, the outcome
-they get, and what makes us different. No jargon, no buzzwords. Then tell me
-which one is strongest and why.
-```
-
-## 2. The Ideal Customer X-Ray
-```
-You are a market researcher. My business: [DESCRIBE BUSINESS]. Build a profile
-of my ideal customer: their top 3 daily frustrations related to my product, what
-they've already tried that failed, the exact words they'd type into Google, and
-what would make them buy TODAY instead of "someday". Format as a one-page brief.
-```
-
-## 3. The Week of Social Posts
-```
-You are a social media manager. Write 7 posts (one per day) for [BUSINESS] on
-[PLATFORM]. Mix: 2 educational tips, 2 behind-the-scenes, 1 customer story,
-1 myth-busting post, 1 direct offer. Each under 100 words with a hook first line
-and one CTA. Label each by day.
-```
-
-## 4. The Sales Email That Doesn't Feel Salesy
-```
-You are a direct-response copywriter. Write a sales email for [OFFER] to
-[AUDIENCE]. Subject line under 6 words. Open with their pain, not our product.
-Under 150 words. One CTA. Tone: helpful friend, not marketer. Add a P.S. with
-honest urgency.
-```
-
-## 5. The Google Review Magnet
-```
-Write a short, friendly message I can send customers of [BUSINESS] asking for a
-Google review. 3 versions: text message, email, and printed card. Each under 50
-words, makes it feel easy (one tap/click), and doesn't sound desperate or
-scripted.
-```
-
-## 6. The Objection Crusher
-```
-You are a sales coach. My offer: [OFFER + PRICE]. List the top 5 objections a
-hesitant buyer has (spoken and unspoken). For each, write a 2-3 sentence
-response that validates the concern first, then reframes it. No pressure
-tactics.
-```
-
-## 7. The Competitor Gap Finder
-```
-You are a competitive analyst. My business: [BUSINESS]. My main competitors:
-[COMPETITOR 1, 2, 3 — or say "typical competitors in my niche"]. Identify 5 gaps
-they likely leave open (service, speed, niche, guarantee, experience) and how I
-could own each one. Rank by easiest to execute this month.
-```
-
-## 8. The Pricing Sanity Check
-```
-You are a pricing strategist. I sell [PRODUCT/SERVICE] at [PRICE]. My costs:
-[ROUGH COSTS]. My customers: [AUDIENCE]. Analyze: am I underpricing? Give me 3
-pricing structures (good/better/best), what to include in each tier, and the
-psychology behind each price point.
-```
-
-## 9. The Content Idea Machine
-```
-Generate 20 content ideas for [BUSINESS] that a [PLATFORM] audience would
-actually engage with. Organize into: questions customers always ask, mistakes
-people make, before/after stories, and hot takes on my industry. Mark the 3 with
-highest viral potential.
-```
-
-## 10. The "What Should I Do Next?" Advisor
-```
-You are a small business consultant. My business: [BUSINESS]. Current monthly
-revenue: [AMOUNT or "just starting"]. My biggest bottleneck: [PROBLEM]. My
-available time: [HOURS/WEEK]. Give me the ONE highest-leverage thing to focus on
-for the next 30 days, why it beats the alternatives, and a week-by-week action
-plan.
-```
+> ⚠️ **Research-integrity note.** These prompts help you *draft, structure and edit your own work faster*. AI can produce fluent nonsense and **fake references** — always verify every fact and citation against real sources, never fabricate data, and follow your institution's and target journal's AI-use policy. You are the author and stay responsible for the work.
 
 ---
 
-### Want the full arsenal?
-- 🚀 **Marketing Machine** — 50 marketing prompts (ads, emails, funnels, SEO) — **$19**
-- 👑 **AI Business OS** — 100+ prompts + 5 done-for-you workflows — **$39**
+## 1. The Literature Synthesizer
+```
+You are a meticulous research assistant. I'll paste key findings from several
+papers on [TOPIC]. Do NOT invent citations — use only what I provide. Group the
+sources into 3–5 themes, name each, and for each theme summarize the consensus,
+the disagreements, and the open gap. Write it as a flowing narrative with
+[AuthorYear] placeholders where I insert real refs. End with a 3-sentence gap
+statement. Flag anything you're unsure about.
+[PASTE FINDINGS]
+```
 
-*© PromptForge. You may use these prompts freely in your business. Please don't resell or republish this pack.*
+## 2. The Abstract Tightener
+```
+You are a journal editor. Rewrite my abstract to under 250 words with this
+structure: background (2 sentences), objective (1), methods (2), results with my
+actual numbers (2–3), conclusion & significance (2). Active voice, no hype words,
+define no acronyms. Then give 5 keywords.
+My draft abstract: [PASTE]
+```
+
+## 3. The Reviewer #2 Responder
+```
+You are an experienced corresponding author writing a point-by-point rebuttal.
+Tone: gracious, evidence-based, never defensive. For each comment I paste:
+restate it, acknowledge it, state exactly what we changed (new text in quotes),
+and if we disagree, give a polite reasoned rebuttal that concedes the valid part
+first. Flag comments that need new analysis vs just text edits.
+Reviewer comments: [PASTE]
+```
+
+## 4. The Paper Explainer (understand fast)
+```
+Explain the key idea of this paper to me at 3 levels: (1) to a smart 12-year-old,
+(2) to an undergrad in the field with the core mechanism, (3) to a specialist with
+the governing equations/assumptions. Then list the 3 main takeaways and the single
+biggest limitation. Be accurate; flag anything contested.
+Paper text / abstract: [PASTE]
+```
+
+## 5. The Methods Cleaner
+```
+Turn my rough notes into a reproducible Methods section. Past tense, enough detail
+to replicate (instrument make/model, settings, quantities, replicates, software +
+version). Use subsections. Insert [PLACEHOLDER] wherever I omitted a detail and
+list those gaps at the end. Don't invent parameter values.
+My notes: [PASTE]
+```
+
+## 6. The Title Machine
+```
+Generate 12 title options for my paper: 4 declarative (state the finding), 4
+descriptive (state the topic), 4 colon-style. Under 15 words each, front-load
+searchable keywords, no undefined jargon. Then pick the best for a general vs a
+specialist journal and say why.
+Finding: [X]. System/method: [Y]. Why it matters: [Z].
+```
+
+## 7. The Figure Caption Writer
+```
+Write a clear, self-contained caption for a figure showing [DESCRIBE FIGURE:
+axes, conditions, what's plotted]. Include: what the figure shows, the key
+comparison, definitions of symbols/error bars, sample size, and the statistical
+test if any. One paragraph, journal style. Then suggest a one-line takeaway
+title for the figure.
+```
+
+## 8. The Grant Aims Starter
+```
+Draft a one-paragraph "Specific Aims" hook for a proposal on [TOPIC]: state the
+big problem, the critical gap, why now, and the overall objective + central
+hypothesis in one crisp sentence each. Persuasive but precise. Tell me where I'd
+need preliminary data to strengthen it.
+Problem/gap: [DESCRIBE]. Hypothesis: [HYPOTHESIS].
+```
+
+## 9. The Email-to-Advisor Drafter
+```
+Help me write a concise, professional email to my [advisor/PI/collaborator].
+Goal: [e.g. ask for a meeting / report a problem / request feedback on a draft /
+push back on a deadline]. Context: [SITUATION]. Keep it under 150 words, respectful
+but clear, with a specific ask and a proposed next step. Give me 2 versions:
+one warmer, one more direct.
+```
+
+## 10. The "What Do I Do Next?" Research Coach
+```
+You are my thesis/research mentor. My project: [DESCRIBE]. Where I am now:
+[STATUS]. My deadline: [DEADLINE]. My biggest blocker: [BLOCKER]. Give me the ONE
+highest-leverage task to do this week, why it beats the alternatives, and a
+day-by-day plan for the next 7 days. Be specific and realistic about time.
+```
+
+---
+
+### Want the full toolkit?
+- 📄 **Publish Faster** — 50 prompts for every stage of getting a paper out — **$19**
+- 🎓 **The Academic OS** — 100+ prompts + 5 research workflows (thesis, defense, career) — **$39**
+
+*© ResearchForge. Free to use in your own research. Please don't resell or republish this pack. Always verify AI outputs and follow your institution's research-integrity and AI-use policies.*
