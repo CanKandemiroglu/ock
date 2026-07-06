@@ -23,4 +23,4 @@ Open `index.html` in any browser — there is no build step and no dependencies.
 
 ---
 
-© 2026 Osman Can Kandemiroglu · University of Bremen · MARUM
+© 2026 Osman Can Kandemiroglu · University of Bremen
