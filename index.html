@@ -3,396 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ResearchForge — AI Prompts That Help You Publish, Not Perish</title>
-<meta name="description" content="Battle-tested AI prompt packs for grad students, PhDs and researchers. Literature reviews, manuscript sections, reviewer responses and grant text — in minutes. Free research prompt generator included.">
-<meta property="og:title" content="ResearchForge — AI That Helps You Publish, Not Perish">
-<meta property="og:description" content="AI prompt packs built by a working scientist, for researchers. Lit reviews, papers, reviewer #2 responses, grants — faster.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0b0e14">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+<title>Osman Can Kandemiroglu — Organic Geochemist</title>
+<meta name="description" content="Osman Can Kandemiroglu — organic geochemist and marine geoscientist (University of Bremen / MARUM). Research in microbial biogeochemistry, stable isotope geochemistry and lipid biomarkers.">
+<meta name="author" content="Osman Can Kandemiroglu">
+<meta property="og:title" content="Osman Can Kandemiroglu — Organic Geochemist">
+<meta property="og:description" content="Marine geoscientist working on carbon cycling, stable isotopes and molecular biosignatures.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
 <style>
 :root{
-  --bg:#0b0e14; --bg2:#121722; --card:#161c2a; --line:#242d40;
-  --text:#e8ecf4; --muted:#9aa5bb; --accent:#3ecf8e; --accent2:#4f8cff;
-  --gold:#ffb020; --radius:14px;
+  --bg:#ffffff; --fg:#1a1f2b; --muted:#5b6472; --line:#e5e8ee;
+  --card:#f7f8fa; --accent:#0b6b5f; --accent-soft:#e6f2f0; --maxw:820px;
 }
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0f1319;--fg:#e6e9ef;--muted:#98a2b3;--line:#232a36;--card:#161b23;--accent:#4fd1c5;--accent-soft:#132a28;}
+}
+:root[data-theme="light"]{--bg:#ffffff;--fg:#1a1f2b;--muted:#5b6472;--line:#e5e8ee;--card:#f7f8fa;--accent:#0b6b5f;--accent-soft:#e6f2f0;}
+:root[data-theme="dark"]{--bg:#0f1319;--fg:#e6e9ef;--muted:#98a2b3;--line:#232a36;--card:#161b23;--accent:#4fd1c5;--accent-soft:#132a28;}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--accent2);text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:1.15rem;color:var(--text)}
-.logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;align-items:center}
-nav ul a{color:var(--muted);font-size:.92rem;font-weight:500}
-nav ul a:hover{color:var(--text)}
-.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:transform .12s ease,box-shadow .12s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--accent);color:#04160d;box-shadow:0 4px 20px rgba(62,207,142,.25)}
-.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-.btn-sm{padding:9px 18px;font-size:.88rem}
-.hero{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% -10%,rgba(79,140,255,.18),transparent)}
-.pill{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:.8rem;color:var(--muted);margin-bottom:22px;background:var(--bg2)}
-.pill b{color:var(--accent)}
-h1{font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.12;font-weight:850;letter-spacing:-.02em;max-width:840px;margin:0 auto 20px}
-h1 em{font-style:normal;color:var(--accent)}
-.sub{font-size:1.15rem;color:var(--muted);max-width:660px;margin:0 auto 34px}
-.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.trust{margin-top:38px;font-size:.85rem;color:var(--muted)}
-.trust b{color:var(--text)}
-section{padding:72px 0}
-.kicker{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.12em;margin-bottom:10px}
-h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
-.lead{color:var(--muted);max-width:620px;margin-bottom:40px}
-.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
-#generator{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.gen-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;max-width:760px;margin:0 auto}
-.gen-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-@media(max-width:640px){.gen-grid{grid-template-columns:1fr}}
-label{display:block;font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:6px}
-select,input[type=text],input[type=email]{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:.95rem;outline:none}
-select:focus,input:focus{border-color:var(--accent2)}
-.gen-out{margin-top:20px;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem;white-space:pre-wrap;color:#c9d4e8;display:none}
-.gen-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.copied{color:var(--accent);font-size:.85rem;align-self:center;display:none}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:860px){.cards{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;position:relative}
-.card.featured{border-color:var(--accent);box-shadow:0 8px 40px rgba(62,207,142,.12)}
-.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#04160d;font-size:.72rem;font-weight:800;padding:4px 14px;border-radius:99px;text-transform:uppercase;letter-spacing:.06em}
-.card h3{font-size:1.2rem;margin-bottom:6px}
-.price{font-size:2.1rem;font-weight:850;margin:12px 0 2px}
-.price small{font-size:.9rem;color:var(--muted);font-weight:500}
-.was{color:var(--muted);text-decoration:line-through;font-size:.95rem;margin-left:8px}
-.card ul{list-style:none;margin:18px 0 26px;flex:1}
-.card li{padding:7px 0;font-size:.92rem;color:var(--muted);padding-left:26px;position:relative}
-.card li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-.card .btn{width:100%;text-align:center}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
-@media(max-width:860px){.steps{grid-template-columns:1fr}}
-.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.step::before{counter-increment:step;content:counter(step);display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;background:var(--accent2);color:#fff;font-weight:800;border-radius:9px;margin-bottom:14px}
-.step h3{font-size:1.05rem;margin-bottom:8px}
-.step p{color:var(--muted);font-size:.92rem}
-.founder{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.founder .wrap{max-width:760px}
-.founder blockquote{font-size:1.05rem;color:var(--text);border-left:3px solid var(--accent);padding-left:20px;margin:0 0 16px}
-.founder .who{color:var(--muted);font-size:.92rem}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
-summary{cursor:pointer;font-weight:600;font-size:.98rem}
-details p{margin-top:12px;color:var(--muted);font-size:.93rem}
-#email{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-.email-form{display:flex;gap:10px;max-width:480px;margin:26px auto 0;flex-wrap:wrap;justify-content:center}
-.email-form input{flex:1;min-width:240px}
-.disclaimer{max-width:760px;margin:24px auto 0;font-size:.82rem;color:var(--muted);text-align:center;line-height:1.5}
-footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
-footer a{color:var(--muted)}
+body{background:var(--bg);color:var(--fg);line-height:1.65;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25;font-weight:600}
+header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+header .role{color:var(--accent);font-weight:600;letter-spacing:.02em;font-size:.95rem;text-transform:uppercase}
+h1{font-size:clamp(2rem,5vw,2.9rem);margin:10px 0 14px;letter-spacing:-.01em}
+header .tagline{color:var(--muted);font-size:1.12rem;max-width:640px}
+.meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+nav.toc{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+  backdrop-filter:blur(6px)}
+nav.toc .wrap{display:flex;gap:22px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;font-size:.9rem}
+nav.toc a{color:var(--muted);font-weight:500}
+nav.toc a:hover{color:var(--fg);text-decoration:none}
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2{font-size:1.5rem;margin-bottom:20px}
+h2 .num{color:var(--accent);font-size:1rem;font-family:-apple-system,sans-serif;margin-right:10px;vertical-align:middle}
+p{margin-bottom:16px}
+p.lead{font-size:1.05rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{font-size:1.08rem;margin-bottom:8px}
+.card p{font-size:.95rem;color:var(--muted);margin-bottom:0}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+@media(max-width:640px){.skills{grid-template-columns:1fr}}
+.skill h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);
+  font-family:-apple-system,sans-serif;margin-bottom:6px}
+.skill p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.item{margin-bottom:26px}
+.item:last-child{margin-bottom:0}
+.item .when{font-size:.85rem;color:var(--muted);font-family:-apple-system,sans-serif}
+.item h3{font-size:1.1rem;margin:3px 0 4px}
+.item .where{color:var(--muted);font-size:.94rem;margin-bottom:8px}
+.item ul{margin:0 0 0 20px;color:var(--fg)}
+.item li{margin-bottom:6px;font-size:.96rem}
+.pubs li,.talks li{margin:0 0 14px 20px;font-size:.95rem}
+.pubs li::marker,.talks li::marker{color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.tag{background:var(--accent-soft);color:var(--accent);border-radius:99px;padding:4px 12px;font-size:.85rem;font-weight:500}
+.contact a{display:inline-block;margin-right:20px;font-size:1rem}
+footer{padding:36px 0;color:var(--muted);font-size:.85rem;text-align:center}
+.theme-toggle{position:fixed;bottom:18px;right:18px;background:var(--card);border:1px solid var(--line);
+  color:var(--fg);border-radius:99px;padding:8px 14px;font-size:.85rem;cursor:pointer;z-index:20}
 </style>
 </head>
 <body>
 
-<nav>
+<header>
   <div class="wrap">
-    <div class="logo">🔬 Research<span>Forge</span></div>
-    <ul>
-      <li><a href="#generator">Free Tool</a></li>
-      <li><a href="#packs">Prompt Packs</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#packs" class="btn btn-primary btn-sm">Get the Packs</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="pill"><b>●</b> Built by a working scientist · 150+ research prompts</div>
-    <h1>Publish, don't perish.<br><em>Let AI do the grunt work.</em></h1>
-    <p class="sub">AI prompt packs for grad students, PhDs and researchers. Draft literature reviews, methods sections, abstracts, reviewer responses and grant text in minutes — so you spend your time thinking, not staring at a blank page.</p>
-    <div class="hero-ctas">
-      <a href="#packs" class="btn btn-primary">Browse Prompt Packs →</a>
-      <a href="#generator" class="btn btn-ghost">Try the Free Generator</a>
+    <p class="role">Organic Geochemist · Marine Geoscientist</p>
+    <h1>Osman Can Kandemiroglu</h1>
+    <p class="tagline">I study carbon cycling in marine and subsurface environments — combining organic geochemical analysis, stable-isotope tracing, and microbial cultivation to read the molecular record of life.</p>
+    <div class="meta">
+      <span>📍 University of Bremen · MARUM</span>
+      <span>✉️ <a href="mailto:osman@uni-bremen.de">osman@uni-bremen.de</a></span>
+      <span>🗣️ German (C1) · English (C1) · Turkish (native)</span>
     </div>
-    <p class="trust">Works with <b>ChatGPT</b>, <b>Claude</b> &amp; <b>Gemini</b> · Instant download · You stay the author — AI drafts, you decide</p>
   </div>
 </header>
 
-<section id="generator">
-  <div class="wrap center">
-    <div class="kicker">Free Tool</div>
-    <h2>Research Prompt Generator</h2>
-    <p class="lead">Pick a task, describe your work, and get a rigorous, ready-to-use prompt. A taste of what's inside the packs.</p>
-    <div class="gen-box">
-      <div class="gen-grid">
-        <div>
-          <label for="task">What do you need help with?</label>
-          <select id="task">
-            <option value="litreview">Synthesize a literature review</option>
-            <option value="abstract">Write / tighten an abstract</option>
-            <option value="reviewer">Respond to Reviewer #2</option>
-            <option value="methods">Draft a methods section</option>
-            <option value="discussion">Turn results into a discussion</option>
-            <option value="grant">Draft grant "Specific Aims"</option>
-            <option value="title">Generate paper titles</option>
-            <option value="explain">Explain a hard concept simply</option>
-          </select>
-        </div>
-        <div>
-          <label for="topic">Your topic / field (be specific)</label>
-          <input type="text" id="topic" placeholder="¹³C-labelling of marine sediment lipids" maxlength="140">
-        </div>
-      </div>
-      <button class="btn btn-primary" id="genBtn" style="width:100%">🔬 Generate My Prompt</button>
-      <div class="gen-out" id="genOut"></div>
-      <div class="gen-actions">
-        <button class="btn btn-ghost btn-sm" id="copyBtn" style="display:none">📋 Copy prompt</button>
-        <span class="copied" id="copiedMsg">Copied! Paste it into ChatGPT or Claude.</span>
-      </div>
-    </div>
-    <p class="disclaimer">⚠️ AI drafts, you verify. These prompts speed up writing and structuring — always fact-check outputs, cite real sources, and follow your institution's and journal's policies on AI use. You are the author and remain responsible for the work's integrity.</p>
+<nav class="toc">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#interests">Interests</a>
+    <a href="#skills">Methods &amp; Skills</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="about">
+  <div class="wrap">
+    <h2><span class="num">01</span>Research Profile</h2>
+    <p class="lead">I combine organic geochemical analysis, stable carbon-isotope tracing, and microbial cultivation to investigate carbon cycling in marine and subsurface environments.</p>
+    <p>My work has spanned <sup>13</sup>C-labelling experiments on deep-sea sediments with compound-specific isotope analysis of fatty acids and intact polar lipids; MALDI-FT-ICR-MS imaging of lipid biomarkers in microbial mats as early-Earth analogues; and the design of experimental model systems for bacterial degradation of organic matter. I am particularly interested in characterising chemoautotrophic metabolic pathways in CO<sub>2</sub>-rich subsurface ecosystems and in identifying molecular biosignatures of ancient carbon fixation.</p>
   </div>
 </section>
 
-<section id="packs">
-  <div class="wrap center">
-    <div class="kicker">The Products</div>
-    <h2>Prompt packs that give you back your weekends</h2>
-    <p class="lead">One faster lit review, one clean reviewer response, one grant that gets funded — and the pack has paid for itself many times over.</p>
-    <div class="cards" style="text-align:left">
-
-      <div class="card">
-        <h3>🎁 Starter Pack</h3>
-        <p style="color:var(--muted);font-size:.9rem">10 essential prompts every researcher needs.</p>
-        <div class="price">Free</div>
-        <ul>
-          <li>10 copy-paste research prompts</li>
-          <li>Lit review, writing &amp; revision</li>
-          <li>Fill-in-the-blank format</li>
-          <li>Delivered instantly by email</li>
-        </ul>
-        <a href="#email" class="btn btn-ghost">Get It Free</a>
-      </div>
-
-      <div class="card featured">
-        <div class="badge">Best Seller</div>
-        <h3>📄 Publish Faster</h3>
-        <p style="color:var(--muted);font-size:.9rem">50 prompts for every stage of getting a paper out.</p>
-        <div class="price">$19 <span class="was">$29</span></div>
-        <ul>
-          <li>50 research-writing prompts</li>
-          <li>Lit review, drafting, figures, revision</li>
-          <li>Reviewer-response &amp; rebuttal toolkit</li>
-          <li>Grant &amp; abstract prompts included</li>
-          <li>Lifetime updates</li>
-        </ul>
-        <!-- LAUNCH: replace href with your Gumroad/LemonSqueezy/Stripe payment link -->
-        <a href="#buy-setup" class="btn btn-primary buy-link" data-product="publish-faster">Buy Now — $19</a>
-      </div>
-
-      <div class="card">
-        <h3>🎓 The Academic OS</h3>
-        <p style="color:var(--muted);font-size:.9rem">Survive and thrive: 100+ prompts + workflows for the whole degree.</p>
-        <div class="price">$39 <span class="was">$59</span></div>
-        <ul>
-          <li>Everything in Publish Faster</li>
-          <li>100+ prompts across 9 areas</li>
-          <li>Thesis, defense &amp; career prompts</li>
-          <li>5 done-for-you research workflows</li>
-          <li>Productivity &amp; advisor-management</li>
-        </ul>
-        <!-- LAUNCH: replace href with your Gumroad/LemonSqueezy/Stripe payment link -->
-        <a href="#buy-setup" class="btn btn-ghost buy-link" data-product="academic-os">Buy Now — $39</a>
-      </div>
-
+<section id="interests">
+  <div class="wrap">
+    <h2><span class="num">02</span>Research Interests</h2>
+    <div class="grid">
+      <div class="card"><h3>Microbial Biogeochemistry</h3><p>How microbial communities transform carbon in sediments and the deep biosphere, resolved through isotope-labelling and lipid analysis.</p></div>
+      <div class="card"><h3>Stable Isotope Geochemistry</h3><p>Compound-specific δ<sup>13</sup>C tracing to quantify metabolic activity and distinguish bacterial from archaeal pathways.</p></div>
+      <div class="card"><h3>Molecular Biosignatures</h3><p>Lipid biomarkers and their spatial distribution as records of past life — with relevance to early-Earth and astrobiology.</p></div>
+      <div class="card"><h3>Organic Matter Cycling</h3><p>Experimental model systems linking laboratory degradation rates to carbon flux in the ocean.</p></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap center">
-    <div class="kicker">How It Works</div>
-    <h2>From blank page to first draft in minutes</h2>
-    <p class="lead">No courses. No fluff. Open, fill in your research, paste, refine.</p>
-    <div class="steps" style="text-align:left">
-      <div class="step"><h3>Download the pack</h3><p>Instant delivery. Prompts organized by research stage — from lit review to reviewer rebuttal.</p></div>
-      <div class="step"><h3>Fill in the blanks</h3><p>Each prompt has [BRACKETED] placeholders. Drop in your field, findings, and target journal.</p></div>
-      <div class="step"><h3>Draft, then verify</h3><p>Run it in ChatGPT, Claude or Gemini. Get a structured first draft in seconds — then fact-check and make it yours.</p></div>
+<section id="skills">
+  <div class="wrap">
+    <h2><span class="num">03</span>Methods &amp; Technical Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>Mass Spectrometry</h3><p>MALDI-FT-ICR-MS (7T solariX XR, Bruker); GC-MS; GC-FID; HPLC-APCI-MS; ICP-MS; FESEM-EDX.</p></div>
+      <div class="skill"><h3>Stable Isotope Tracing</h3><p><sup>13</sup>C-labelling incubations; compound-specific δ<sup>13</sup>C of FAMEs; isotope-uptake quantification per lipid class.</p></div>
+      <div class="skill"><h3>Lipid Biomarker Analysis</h3><p>Intact polar lipids (archaeol, PE-DAG/DEG series); GDGTs (TEX<sub>86</sub>, BIT, Methane Index); alkenones; pigments &amp; quinones.</p></div>
+      <div class="skill"><h3>Microbial Cultivation</h3><p>Marine minimal-medium design; mono-/co-culture experiments; nutrient-gradient design; OD<sub>600</sub> growth kinetics.</p></div>
+      <div class="skill"><h3>Imaging &amp; Elemental</h3><p>MALDI-MSI at 50 µm; µ-XRF elemental mapping (S, Fe, Mn, Br); microsensor profiling (O<sub>2</sub>, H<sub>2</sub>S, pH).</p></div>
+      <div class="skill"><h3>Data &amp; Software</h3><p>Python (data processing, growth-curve analysis, GUIs); R; MATLAB; ImageJ; Cytoscape; BAYSPAR; Bruker DataAnalysis.</p></div>
     </div>
   </div>
 </section>
 
-<section class="founder">
+<section id="research">
   <div class="wrap">
-    <div class="kicker">Why trust these</div>
-    <blockquote>"I built these prompts to get my own M.Sc. thesis and papers out the door faster. Every one is designed the way a scientist thinks — role, context, constraints, and an output format you can actually use — not the generic one-liners floating around online."</blockquote>
-    <p class="who">— Built by a marine geoscientist (MARUM / MPI Bremen). Real lab, real papers, real deadlines. These prompts respect research integrity: they help you <b>draft and structure</b> faster — you always stay the author.</p>
+    <h2><span class="num">04</span>Selected Research Experience</h2>
+
+    <div class="item">
+      <p class="when">10/2024 – 12/2025 · MARUM &amp; MPI Bremen</p>
+      <h3>Master's Thesis — Organic Geochemistry &amp; Marine Glycobiochemistry</h3>
+      <p class="where">Supervisors: Prof. K.-U. Hinrichs &amp; Dr. J.-H. Hehemann</p>
+      <ul>
+        <li>Designed a marine minimal medium with systematic nutrient gradients for controlled bacterial growth experiments.</li>
+        <li>Cultured six marine <em>Vibrio</em> strains in mono- and co-culture; monitored growth dynamics over 48–96 h in biological triplicates.</li>
+        <li>Synthesised alginate microparticles and developed real-time degradation monitoring via time-lapse microscopy and spectrophotometry.</li>
+        <li>Translated laboratory degradation rates into water-column carbon-flux predictions.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <p class="when">08/2023 – 09/2024 · MARUM</p>
+      <h3>Microbial Mat Biogeochemistry — Light-Driven Molecular Structuring</h3>
+      <p class="where">Supervisor: Dr. Benjamin Nettersheim</p>
+      <ul>
+        <li>Developed MALDI-FT-ICR-MS imaging workflows for extraction-free detection of intact polar lipids, pigments and carotenoids at 50 µm resolution in hypersaline microbial mats.</li>
+        <li>Identified novel biomarker signatures and 14 previously uncharacterised compounds associated with sulfate-reducing bacteria.</li>
+        <li>Integrated MALDI-MSI, µ-XRF elemental mapping and microsensor data into a five-zone redox framework, with explicit relevance to biosignature preservation.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <p class="when">Summer 2022 · MARUM</p>
+      <h3>¹³C-Labelling &amp; Lipid Analysis of Deep-Biosphere Sediments</h3>
+      <p class="where">Helgoland Mud Area, North Sea (core HE595 GC-11)</p>
+      <ul>
+        <li>Conducted <sup>13</sup>C-bicarbonate labelling incubations at multiple temperatures and durations on sediments from 23–380 cm depth.</li>
+        <li>Performed compound-specific δ<sup>13</sup>C analysis of FAMEs by GC-IRMS, identifying active bacterial metabolism with enrichments up to ~2,480‰.</li>
+        <li>Used the OH-archaeol/archaeol ratio to track a shift in archaeal community structure across the sulfate–methane transition zone.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <p class="when">05/2022 – 01/2023 · Alfred Wegener Institute (AWI)</p>
+      <h3>Research Assistant — Organic Geochemistry Laboratory</h3>
+      <ul>
+        <li>Ran the complete biomarker analytical pipeline (extraction, saponification, chromatography, derivatisation) on samples from IODP 374, PS81 and PS119.</li>
+        <li>Independently operated GC-FID and HPLC-APCI-MS for <em>n</em>-alkane, alkenone and GDGT quantification.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section id="email">
+<section id="education">
   <div class="wrap">
-    <div class="kicker">Free Starter Pack</div>
-    <h2>Get 10 free research prompts + weekly workflow tips</h2>
-    <p class="lead" style="margin:0 auto">Join the newsletter and get the Starter Pack instantly. One short, useful email a week. Unsubscribe anytime.</p>
-    <!-- LAUNCH: replace action with your form endpoint (Formspree / Buttondown / ConvertKit / MailerLite) -->
-    <form class="email-form" id="emailForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="email" name="email" placeholder="you@university.edu" required>
-      <button class="btn btn-primary" type="submit">Send Me the Pack</button>
-    </form>
+    <h2><span class="num">05</span>Education</h2>
+    <div class="item">
+      <p class="when">04/2020 – 03/2026</p>
+      <h3>M.Sc. Marine Geosciences — University of Bremen (MARUM)</h3>
+      <p class="where">Molecular Geobiology · Organic Geochemistry · Biogeochemistry. Additional coursework at Utrecht University.</p>
+    </div>
+    <div class="item">
+      <p class="when">2008 – 2011</p>
+      <h3>M.Sc. Applied Geology / Hydrogeology — Ruhr University Bochum</h3>
+      <p class="where">Thesis on nickel mobilisation in groundwater (ICP-MS, GF-AAS, FESEM-EDX, PHREEQC).</p>
+    </div>
+    <div class="item">
+      <p class="when">2002 – 2006</p>
+      <h3>B.Sc. Geophysical Engineering — University of Kocaeli</h3>
+    </div>
   </div>
 </section>
 
-<section id="faq">
+<section id="publications">
   <div class="wrap">
-    <div class="kicker center" style="text-align:center">FAQ</div>
-    <h2 class="center" style="text-align:center;margin-bottom:36px">Questions, answered</h2>
-    <details open>
-      <summary>Isn't using AI in research cheating / against the rules?</summary>
-      <p>Using AI to <em>draft, structure and edit</em> your own work — then verifying and citing properly — is increasingly accepted, and many journals allow it with disclosure. These prompts are built for that honest use: you provide the science and the sources, AI helps you write it faster, and you stay the author. Always check your institution's and target journal's specific AI policy. Never use AI to fabricate data, references, or results.</p>
-    </details>
-    <details>
-      <summary>Will the AI make up fake references?</summary>
-      <p>It can — which is exactly why these prompts are written to make you supply the sources and to flag anything unverified. Every pack includes a "no hallucinated citations" instruction and a verification checklist. Treat AI output as a smart first draft, never as fact.</p>
-    </details>
-    <details>
-      <summary>Do these work for my field?</summary>
-      <p>Yes. The prompts are discipline-agnostic — you fill in your field, methods and findings. They've been designed and tested against real STEM writing (geoscience, biology, chemistry) but work for social sciences and humanities too.</p>
-    </details>
-    <details>
-      <summary>Which AI tool do I need?</summary>
-      <p>Any of ChatGPT (free or paid), Claude, or Gemini. Every prompt is model-agnostic. For long documents, Claude and ChatGPT paid tiers handle more context.</p>
-    </details>
-    <details>
-      <summary>Do I get updates?</summary>
-      <p>Yes — lifetime. As models improve and prompts get sharper, you get the new versions free. Keep your receipt email.</p>
-    </details>
+    <h2><span class="num">06</span>Publications &amp; Contributions</h2>
+    <h3 style="font-size:1rem;color:var(--muted);margin-bottom:10px;font-family:-apple-system,sans-serif;text-transform:uppercase;letter-spacing:.05em">Peer-reviewed</h3>
+    <ul class="pubs">
+      <li>Wisotzky, F., Kandemiroglu, O.C., Plassmann, C. (2012). Nickelfreisetzung in das Grundwasser und dessen Bindung bei der Wasseraufbereitung zu Trinkwasser. <em>gwf – Wasser|Abwasser</em>, 7/8, 828–835.</li>
+    </ul>
+    <h3 style="font-size:1rem;color:var(--muted);margin:22px 0 10px;font-family:-apple-system,sans-serif;text-transform:uppercase;letter-spacing:.05em">Selected conference contributions</h3>
+    <ul class="talks">
+      <li>Kandemiroglu, O.C., Gu, B., Hehemann, J.-H. (2025). <em>Instant Visualization of Polysaccharide Degradation by Marine Bacteria.</em> Poster, Ocean Floor Symposium, MARUM.</li>
+      <li>DAbG Annual Workshops (2022, 2024, 2025) — Deutsche Astrobiologische Gesellschaft.</li>
+      <li>GLOMAR Stable Isotopes in Ecology course (2022), MARUM.</li>
+    </ul>
+    <h3 style="font-size:1rem;color:var(--muted);margin:22px 0 10px;font-family:-apple-system,sans-serif;text-transform:uppercase;letter-spacing:.05em">Memberships</h3>
+    <div class="tags">
+      <span class="tag">EAOG</span>
+      <span class="tag">The Geochemical Society</span>
+      <span class="tag">EANA</span>
+      <span class="tag">DAbG</span>
+      <span class="tag">EGU</span>
+    </div>
   </div>
 </section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2><span class="num">07</span>Contact</h2>
+    <p>Open to collaborations in organic geochemistry, biomarker analysis, and microbial biogeochemistry.</p>
+    <p class="contact">
+      <a href="mailto:osman@uni-bremen.de">✉️ Email</a>
+      <a href="https://github.com/cankandemiroglu">💻 GitHub</a>
+    </p>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="wrap">
-    <p>🔬 <b>ResearchForge</b> — AI prompt packs for researchers who'd rather do science than fight a blank page.</p>
-    <p style="margin-top:8px">© 2026 ResearchForge · Use AI responsibly · <a href="#faq">Integrity &amp; policy</a> · <a href="mailto:ockgeo@gmail.com">Contact</a></p>
+    <p>© 2026 Osman Can Kandemiroglu · University of Bremen · MARUM</p>
   </div>
 </footer>
 
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">◐ Theme</button>
 <script>
-const TEMPLATES = {
-  litreview: (t)=>`You are a meticulous research assistant with deep knowledge of ${t}. I will paste a set of papers (or their key findings). Do NOT invent citations — only use what I provide, and if you infer anything, label it clearly as inference.
-
-Task: Synthesize a literature review section on "${t}".
-1. Group the sources into 3–5 themes and name each theme.
-2. For each theme: summarize the consensus, the disagreements, and the specific gap that remains open.
-3. Write a flowing narrative (not a list) with in-text citation placeholders like [AuthorYear] where I should insert real references.
-4. End with a 3-sentence "gap statement" that motivates a new study.
-Constraints: academic tone, precise, no filler, no fabricated references. Flag anywhere you are unsure so I can verify.
-
-Here are my sources:
-[PASTE PAPERS / KEY FINDINGS HERE]`,
-  abstract: (t)=>`You are a journal editor experienced with ${t}. Write a structured abstract (max 250 words) for my study.
-
-Use this structure: Background/motivation (2 sentences) → Objective (1) → Methods (2) → Key results with the actual numbers I give you (2–3) → Conclusion & significance (2).
-Rules: active voice, no hype words ("novel", "groundbreaking") unless justified, no undefined acronyms, quantify wherever possible. Then give me (a) 5 keywords and (b) a one-sentence "significance statement" for a general audience.
-
-My study details:
-- Field: ${t}
-- Question: [YOUR RESEARCH QUESTION]
-- Methods: [METHODS]
-- Key results (with numbers): [RESULTS]
-- Main conclusion: [CONCLUSION]`,
-  reviewer: (t)=>`You are an experienced corresponding author in ${t} writing a point-by-point response to peer reviewers. Tone: gracious, confident, evidence-based — never defensive.
-
-For each reviewer comment I paste, produce:
-1. A quoted restatement of the comment.
-2. "We thank the reviewer..." acknowledgement (vary the wording, don't be robotic).
-3. Exactly what we changed, with the new/revised text in quotes and a line/section pointer placeholder.
-4. If we disagree: a polite, well-reasoned rebuttal citing evidence — concede the valid part first.
-Keep each response tight. Flag any comment that needs new data/analysis rather than just text changes.
-
-Reviewer comments:
-[PASTE REVIEWER COMMENTS HERE]`,
-  methods: (t)=>`You are a careful methods writer in ${t}. Turn my rough notes into a clean, reproducible Methods section.
-
-Requirements:
-- Past tense, passive-or-active per field norm, third person.
-- Enough detail for replication: instruments (make/model), settings, quantities, controls, replicates, software + version.
-- Logical subsections with headers.
-- A final "statistics/data analysis" paragraph.
-- Insert [PLACEHOLDER] where I forgot a detail, and list those gaps at the end so I can fill them.
-Do not add methods I didn't mention. Do not invent parameter values.
-
-My rough notes:
-[PASTE YOUR METHODS NOTES / BULLET POINTS]`,
-  discussion: (t)=>`You are a senior researcher in ${t} helping me write a Discussion section. I'll give you my key results.
-
-Structure the discussion:
-1. Open by restating the main finding and whether it answered the question (no repeating the full results).
-2. Interpret each key result — what it means mechanistically, not just what it shows.
-3. Compare to prior work with [AuthorYear] placeholders (use only comparisons I confirm; flag assumptions).
-4. Honestly state 2–3 limitations and how they bound the conclusions.
-5. 2–3 concrete future directions.
-6. A strong closing significance sentence.
-Academic tone, no overclaiming, hedge appropriately ("suggests", "is consistent with").
-
-My results:
-[PASTE KEY RESULTS + CONTEXT]`,
-  grant: (t)=>`You are a funded PI and grant-writing coach in ${t}. Draft a one-page "Specific Aims" for my proposal.
-
-Format:
-- Hook paragraph: the big problem, the critical gap, and why now.
-- Long-term goal + overall objective + central hypothesis (one crisp sentence each).
-- 2–3 Specific Aims, each with a title, a one-line rationale, and the approach — designed so they are NOT fully dependent on each other.
-- Payoff paragraph: expected outcomes and the impact if successful.
-Constraints: persuasive but precise, reviewer-skimmable (bold the aim titles), fits one page. Point out where I need preliminary data to strengthen it.
-
-My project:
-- Field: ${t}
-- Problem & gap: [DESCRIBE]
-- Hypothesis: [HYPOTHESIS]
-- Approach ideas: [METHODS/APPROACH]`,
-  title: (t)=>`Generate 12 title options for my paper in ${t}. Give a mix:
-- 4 concise declarative titles (state the finding)
-- 4 descriptive titles (state the topic/system)
-- 4 "colon" titles (Hook: specific descriptor)
-For each, keep under 15 words, no undefined jargon, and front-load the most searchable keywords. Then recommend the single best for (a) a high-impact general journal and (b) a specialist journal, and explain why in one line each.
-
-My paper: findings = [KEY FINDING], system/method = [SYSTEM/METHOD], why it matters = [SIGNIFICANCE]`,
-  explain: (t)=>`You are a brilliant teacher. Explain "${t}" at three levels so I can use whichever fits:
-1. To a smart 12-year-old (analogy-driven, 4 sentences).
-2. To an undergrad in the field (precise, with the key mechanism, ~120 words).
-3. To a specialist (rigorous, name the governing equations/parameters/edge cases).
-Then give me: the 3 most common misconceptions, and 2 analogies I could use in a talk. Be accurate — if something is contested, say so.`
-};
-document.getElementById('genBtn').addEventListener('click',()=>{
-  const task=document.getElementById('task').value;
-  const topic=document.getElementById('topic').value.trim()||'my research topic';
-  const out=document.getElementById('genOut');
-  out.textContent=TEMPLATES[task](topic);
-  out.style.display='block';
-  document.getElementById('copyBtn').style.display='inline-block';
-  document.getElementById('copiedMsg').style.display='none';
-});
-document.getElementById('copyBtn').addEventListener('click',()=>{
-  navigator.clipboard.writeText(document.getElementById('genOut').textContent).then(()=>{
-    document.getElementById('copiedMsg').style.display='inline';
+(function(){
+  var btn=document.getElementById('themeToggle');
+  btn.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' :
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'));
+    document.documentElement.setAttribute('data-theme',next);
   });
-});
-document.querySelectorAll('.buy-link').forEach(a=>{
-  a.addEventListener('click',e=>{
-    if(a.getAttribute('href').startsWith('#buy-setup')){
-      e.preventDefault();
-      alert('Almost live! Connect your payment link:\n\n1. Create a free Gumroad account\n2. Upload the product file from /products (export to PDF first)\n3. Paste your Gumroad link into this button\'s href in index.html\n\nSee README.md → Launch Checklist (~10 minutes).');
-    }
-  });
-});
-document.getElementById('emailForm').addEventListener('submit',e=>{
-  const f=e.target;
-  if(f.action.includes('YOUR_FORM_ID')){
-    e.preventDefault();
-    alert('Email capture is one step from live:\n\n1. Create a free Formspree or Buttondown account\n2. Replace YOUR_FORM_ID in index.html with your endpoint\n\nSee README.md → Launch Checklist.');
-  }
-});
+})();
 </script>
 </body>
 </html>
