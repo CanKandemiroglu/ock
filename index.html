@@ -40,7 +40,7 @@ nav.toc{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px 
 nav.toc .wrap{display:flex;gap:22px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;font-size:.9rem}
 nav.toc a{color:var(--muted);font-weight:500}
 nav.toc a:hover{color:var(--fg);text-decoration:none}
-section{padding:48px 0;border-bottom:1px solid var(--line)}
+section{padding:48px 0;border-bottom:1px solid var(--line);scroll-margin-top:68px}
 section:last-of-type{border-bottom:none}
 h2{font-size:1.5rem;margin-bottom:20px}
 h2 .num{color:var(--accent);font-size:1rem;font-family:-apple-system,sans-serif;margin-right:10px;vertical-align:middle}
@@ -72,6 +72,11 @@ footer{padding:36px 0;color:var(--muted);font-size:.85rem;text-align:center}
 .theme-toggle{position:fixed;bottom:18px;right:18px;background:var(--card);border:1px solid var(--line);
   color:var(--fg);border-radius:99px;padding:8px 14px;font-size:.85rem;cursor:pointer;z-index:20}
 </style>
+<script>
+(function(){
+  try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+})();
+</script>
 </head>
 <body>
 
@@ -257,6 +262,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.85rem;text-align:center}
     var next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' :
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'));
     document.documentElement.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
   });
 })();
 </script>
